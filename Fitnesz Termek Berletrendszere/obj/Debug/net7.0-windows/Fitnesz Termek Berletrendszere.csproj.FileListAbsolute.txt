@@ -33,3 +33,4 @@ C:\Users\user\Documents\IV EV\II FELEV\NET\Fitnesz Termek Berletrendszere\Fitnes
 C:\Users\user\Documents\IV EV\II FELEV\NET\Fitnesz Termek Berletrendszere\Fitnesz Termek Berletrendszere\bin\Debug\net7.0-windows\runtimes\win-x64\native\krb5_64.dll
 C:\Users\user\Documents\IV EV\II FELEV\NET\Fitnesz Termek Berletrendszere\Fitnesz Termek Berletrendszere\bin\Debug\net7.0-windows\runtimes\win-x64\native\krbcc64.dll
 C:\Users\user\Documents\IV EV\II FELEV\NET\Fitnesz Termek Berletrendszere\Fitnesz Termek Berletrendszere\obj\Debug\net7.0-windows\Fitnesz_Termek_Berletrendszere.MainForm.resources
+C:\Users\user\Documents\IV EV\II FELEV\NET\Fitnesz Termek Berletrendszere\Fitnesz Termek Berletrendszere\obj\Debug\net7.0-windows\Fitnesz_Termek_Berletrendszere.GuestForm.resources

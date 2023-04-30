@@ -30,20 +30,22 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.button_logout = new System.Windows.Forms.Button();
             this.button_client = new System.Windows.Forms.Button();
             this.button_rental_type = new System.Windows.Forms.Button();
             this.button_dashboard = new System.Windows.Forms.Button();
             this.panel_main = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel_slide = new System.Windows.Forms.Panel();
-            this.panel_slider = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label_exit = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel_slider = new System.Windows.Forms.Panel();
             this.mySqlCommand1 = new MySql.Data.MySqlClient.MySqlCommand();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel_m = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel_main.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -51,11 +53,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel2.SuspendLayout();
+            this.panel_m.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.button_logout);
             this.panel1.Controls.Add(this.button_client);
             this.panel1.Controls.Add(this.button_rental_type);
             this.panel1.Controls.Add(this.button_dashboard);
@@ -66,18 +70,19 @@
             this.panel1.Size = new System.Drawing.Size(138, 700);
             this.panel1.TabIndex = 0;
             // 
-            // button1
+            // button_logout
             // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(0, 582);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(138, 118);
-            this.button1.TabIndex = 3;
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.UseVisualStyleBackColor = true;
+            this.button_logout.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.button_logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_logout.ForeColor = System.Drawing.Color.Black;
+            this.button_logout.Image = ((System.Drawing.Image)(resources.GetObject("button_logout.Image")));
+            this.button_logout.Location = new System.Drawing.Point(0, 582);
+            this.button_logout.Name = "button_logout";
+            this.button_logout.Size = new System.Drawing.Size(138, 118);
+            this.button_logout.TabIndex = 3;
+            this.button_logout.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button_logout.UseVisualStyleBackColor = true;
+            this.button_logout.Click += new System.EventHandler(this.button_logout_Click);
             // 
             // button_client
             // 
@@ -135,35 +140,25 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(7, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(125, 80);
+            this.pictureBox1.Size = new System.Drawing.Size(101, 90);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // panel_slide
             // 
-            this.panel_slide.Controls.Add(this.panel_slider);
             this.panel_slide.Controls.Add(this.pictureBox4);
             this.panel_slide.Controls.Add(this.pictureBox3);
             this.panel_slide.Controls.Add(this.pictureBox2);
             this.panel_slide.Controls.Add(this.label_exit);
             this.panel_slide.Controls.Add(this.label1);
-            this.panel_slide.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_slide.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel_slide.Location = new System.Drawing.Point(138, 0);
             this.panel_slide.Name = "panel_slide";
             this.panel_slide.Size = new System.Drawing.Size(962, 700);
             this.panel_slide.TabIndex = 1;
-            // 
-            // panel_slider
-            // 
-            this.panel_slider.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.panel_slider.ForeColor = System.Drawing.SystemColors.Control;
-            this.panel_slider.Location = new System.Drawing.Point(6, 125);
-            this.panel_slider.Name = "panel_slider";
-            this.panel_slider.Size = new System.Drawing.Size(11, 97);
-            this.panel_slider.TabIndex = 5;
             // 
             // pictureBox4
             // 
@@ -220,6 +215,15 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Fitness managment systeme";
             // 
+            // panel_slider
+            // 
+            this.panel_slider.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.panel_slider.ForeColor = System.Drawing.SystemColors.Control;
+            this.panel_slider.Location = new System.Drawing.Point(3, 125);
+            this.panel_slider.Name = "panel_slider";
+            this.panel_slider.Size = new System.Drawing.Size(11, 97);
+            this.panel_slider.TabIndex = 5;
+            // 
             // mySqlCommand1
             // 
             this.mySqlCommand1.CacheAge = 0;
@@ -227,18 +231,38 @@
             this.mySqlCommand1.EnableCaching = false;
             this.mySqlCommand1.Transaction = null;
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.panel_slider);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.Location = new System.Drawing.Point(138, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(25, 700);
+            this.panel2.TabIndex = 2;
+            // 
+            // panel_m
+            // 
+            this.panel_m.Controls.Add(this.panel_slide);
+            this.panel_m.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_m.Location = new System.Drawing.Point(0, 0);
+            this.panel_m.Name = "panel_m";
+            this.panel_m.Size = new System.Drawing.Size(1100, 700);
+            this.panel_m.TabIndex = 3;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(1100, 700);
-            this.Controls.Add(this.panel_slide);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel_m);
             this.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainForm";
             this.panel1.ResumeLayout(false);
             this.panel_main.ResumeLayout(false);
@@ -248,6 +272,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel_m.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -267,7 +293,9 @@
         private Label label1;
         private PictureBox pictureBox4;
         private Panel panel_slider;
-        private Button button1;
+        private Button button_logout;
         private MySql.Data.MySqlClient.MySqlCommand mySqlCommand1;
+        private Panel panel2;
+        private Panel panel_m;
     }
 }

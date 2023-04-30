@@ -21,6 +21,9 @@ namespace Fitnesz_Termek_Berletrendszere
         {
             panel_slider.Height = button_dashboard.Height;
             panel_slider.Top = button_dashboard.Top;
+
+            panel_m.Controls.Clear();
+            panel_m.Controls.Add(panel_slide);
         }
 
         private void button_rental_type_Click(object sender, EventArgs e)
@@ -33,6 +36,14 @@ namespace Fitnesz_Termek_Berletrendszere
         {
             panel_slider.Height = button_client.Height;
             panel_slider.Top = button_client.Top;
+
+            panel_m.Controls.Clear();
+            GuestForm guest = new GuestForm();
+            guest.TopLevel = false;
+            guest.Dock = DockStyle.Right;
+            guest.FormBorderStyle = FormBorderStyle.None;
+            panel_m.Controls.Add(guest);
+            guest.Show();
         }
 
         private void label_exit_MouseEnter(object sender, EventArgs e)
@@ -48,6 +59,12 @@ namespace Fitnesz_Termek_Berletrendszere
         private void label_exit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void button_logout_Click(object sender, EventArgs e)
+        {
+            panel_slider.Height = button_logout.Height;
+            panel_slider.Top = button_logout.Top;
         }
     }
 }
