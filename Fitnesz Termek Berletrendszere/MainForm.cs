@@ -30,6 +30,14 @@ namespace Fitnesz_Termek_Berletrendszere
         {
             panel_slider.Height = button_rental_type.Height - 10;
             panel_slider.Top = button_rental_type.Top;
+
+            panel_m.Controls.Clear();
+            GymForm gym = new GymForm();
+            gym.TopLevel = false;
+            gym.Dock= DockStyle.Right;
+            gym.FormBorderStyle = FormBorderStyle.None;
+            panel_m.Controls.Add(gym);
+            gym.Show();
         }
 
         private void button_client_Click(object sender, EventArgs e)

@@ -43,8 +43,10 @@ namespace Fitnesz_Termek_Berletrendszere
                     string fname = textBox_fname.Text;
                     string lname = textBox_lname.Text;
                     string phone = textBox_phone.Text;
+                    string email = textBox_email.Text;
 
                     Boolean insertGuest = guest.insertGuest(id, fname, lname, phone);
+
 
                     if (insertGuest)
                     {
@@ -56,6 +58,20 @@ namespace Fitnesz_Termek_Berletrendszere
                     {
                         MessageBox.Show("ERROR- guest not inserted ", "Error Save", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
+
+
+                    Boolean insertUser = guest.insertUser(fname, phone, email);
+                    if (insertUser)
+                    {
+                        MessageBox.Show("New user saved successfully!", "User Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        getTable();
+                        button_clean.PerformClick();
+                    }
+                    else
+                    {
+                        MessageBox.Show("ERROR- user not inserted ", "Error Save", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+
                 }
                 catch(Exception ex)
                 {
@@ -156,5 +172,7 @@ namespace Fitnesz_Termek_Berletrendszere
             }
 
         }
+
+       
     }
 }

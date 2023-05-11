@@ -46,6 +46,7 @@
             this.mySqlCommand1 = new MySql.Data.MySqlClient.MySqlCommand();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel_m = new System.Windows.Forms.Panel();
+            this.button_reserve = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel_main.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -59,6 +60,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button_reserve);
             this.panel1.Controls.Add(this.button_logout);
             this.panel1.Controls.Add(this.button_client);
             this.panel1.Controls.Add(this.button_rental_type);
@@ -90,7 +92,7 @@
             this.button_client.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_client.ForeColor = System.Drawing.Color.Black;
             this.button_client.Image = ((System.Drawing.Image)(resources.GetObject("button_client.Image")));
-            this.button_client.Location = new System.Drawing.Point(0, 343);
+            this.button_client.Location = new System.Drawing.Point(0, 359);
             this.button_client.Name = "button_client";
             this.button_client.Size = new System.Drawing.Size(138, 118);
             this.button_client.TabIndex = 2;
@@ -104,7 +106,7 @@
             this.button_rental_type.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_rental_type.ForeColor = System.Drawing.Color.Black;
             this.button_rental_type.Image = ((System.Drawing.Image)(resources.GetObject("button_rental_type.Image")));
-            this.button_rental_type.Location = new System.Drawing.Point(0, 215);
+            this.button_rental_type.Location = new System.Drawing.Point(0, 231);
             this.button_rental_type.Name = "button_rental_type";
             this.button_rental_type.Size = new System.Drawing.Size(138, 128);
             this.button_rental_type.TabIndex = 1;
@@ -122,7 +124,7 @@
             this.button_dashboard.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button_dashboard.Location = new System.Drawing.Point(0, 125);
             this.button_dashboard.Name = "button_dashboard";
-            this.button_dashboard.Size = new System.Drawing.Size(138, 90);
+            this.button_dashboard.Size = new System.Drawing.Size(138, 106);
             this.button_dashboard.TabIndex = 0;
             this.button_dashboard.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button_dashboard.UseVisualStyleBackColor = true;
@@ -249,6 +251,19 @@
             this.panel_m.Size = new System.Drawing.Size(1100, 700);
             this.panel_m.TabIndex = 3;
             // 
+            // button_reserve
+            // 
+            this.button_reserve.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button_reserve.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_reserve.ForeColor = System.Drawing.Color.Black;
+            this.button_reserve.Image = ((System.Drawing.Image)(resources.GetObject("button_reserve.Image")));
+            this.button_reserve.Location = new System.Drawing.Point(0, 477);
+            this.button_reserve.Name = "button_reserve";
+            this.button_reserve.Size = new System.Drawing.Size(138, 118);
+            this.button_reserve.TabIndex = 4;
+            this.button_reserve.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button_reserve.UseVisualStyleBackColor = true;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
@@ -297,5 +312,6 @@
         private MySql.Data.MySqlClient.MySqlCommand mySqlCommand1;
         private Panel panel2;
         private Panel panel_m;
+        private Button button_reserve;
     }
 }

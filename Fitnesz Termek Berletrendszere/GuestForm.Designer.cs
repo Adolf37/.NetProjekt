@@ -48,6 +48,8 @@
             this.textBox_phone = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.textBox_email = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.dataGridView_Guest = new Guna.UI2.WinForms.Guna2DataGridView();
             this.panel_button.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -134,7 +136,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(221, 365);
+            this.label1.Location = new System.Drawing.Point(394, 302);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(49, 20);
             this.label1.TabIndex = 0;
@@ -142,14 +144,14 @@
             // 
             // textBox_Id
             // 
-            this.textBox_Id.Location = new System.Drawing.Point(307, 359);
+            this.textBox_Id.Location = new System.Drawing.Point(466, 299);
             this.textBox_Id.Name = "textBox_Id";
             this.textBox_Id.Size = new System.Drawing.Size(125, 27);
             this.textBox_Id.TabIndex = 1;
             // 
             // textBox_fname
             // 
-            this.textBox_fname.Location = new System.Drawing.Point(307, 405);
+            this.textBox_fname.Location = new System.Drawing.Point(334, 400);
             this.textBox_fname.Name = "textBox_fname";
             this.textBox_fname.Size = new System.Drawing.Size(125, 27);
             this.textBox_fname.TabIndex = 3;
@@ -157,7 +159,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(187, 408);
+            this.label2.Location = new System.Drawing.Point(210, 407);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(83, 20);
             this.label2.TabIndex = 2;
@@ -185,7 +187,7 @@
             // 
             // textBox_lname
             // 
-            this.textBox_lname.Location = new System.Drawing.Point(603, 405);
+            this.textBox_lname.Location = new System.Drawing.Point(334, 355);
             this.textBox_lname.Name = "textBox_lname";
             this.textBox_lname.Size = new System.Drawing.Size(125, 27);
             this.textBox_lname.TabIndex = 6;
@@ -193,7 +195,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(486, 408);
+            this.label3.Location = new System.Drawing.Point(210, 358);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(82, 20);
             this.label3.TabIndex = 5;
@@ -201,7 +203,7 @@
             // 
             // textBox_phone
             // 
-            this.textBox_phone.Location = new System.Drawing.Point(603, 356);
+            this.textBox_phone.Location = new System.Drawing.Point(584, 400);
             this.textBox_phone.Name = "textBox_phone";
             this.textBox_phone.Size = new System.Drawing.Size(125, 27);
             this.textBox_phone.TabIndex = 8;
@@ -209,7 +211,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(515, 359);
+            this.label4.Location = new System.Drawing.Point(512, 407);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(53, 20);
             this.label4.TabIndex = 7;
@@ -217,6 +219,8 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.textBox_email);
+            this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.dataGridView_Guest);
             this.panel2.Controls.Add(this.textBox_phone);
             this.panel2.Controls.Add(this.label1);
@@ -231,6 +235,22 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(962, 464);
             this.panel2.TabIndex = 9;
+            // 
+            // textBox_email
+            // 
+            this.textBox_email.Location = new System.Drawing.Point(584, 355);
+            this.textBox_email.Name = "textBox_email";
+            this.textBox_email.Size = new System.Drawing.Size(125, 27);
+            this.textBox_email.TabIndex = 11;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(512, 362);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(49, 20);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "email:";
             // 
             // dataGridView_Guest
             // 
@@ -255,7 +275,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView_Guest.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView_Guest.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dataGridView_Guest.Location = new System.Drawing.Point(118, 49);
+            this.dataGridView_Guest.Location = new System.Drawing.Point(142, 46);
             this.dataGridView_Guest.Name = "dataGridView_Guest";
             this.dataGridView_Guest.RowHeadersVisible = false;
             this.dataGridView_Guest.RowHeadersWidth = 51;
@@ -328,5 +348,7 @@
         private Button button_update;
         private Button button_save;
         private Guna.UI2.WinForms.Guna2DataGridView dataGridView_Guest;
+        private TextBox textBox_email;
+        private Label label6;
     }
 }
