@@ -73,6 +73,27 @@ namespace Fitnesz_Termek_Berletrendszere
         {
             panel_slider.Height = button_logout.Height;
             panel_slider.Top = button_logout.Top;
+
+            this.Hide();
+            LoginForm login = new LoginForm();
+            login.Show();
+            
+        }
+
+        private void button_reserve_Click(object sender, EventArgs e)
+        {
+            panel_slider.Height = button_reserve.Height;
+            panel_slider.Top = button_reserve.Top;
+
+            panel_m.Controls.Clear();
+            ReservationForm reservation = new ReservationForm();
+            reservation.TopLevel = false;
+            reservation.Dock = DockStyle.Right;
+            reservation.FormBorderStyle = FormBorderStyle.None;
+            panel_m.Controls.Add(reservation);
+            reservation.Show();
+
+
         }
     }
 }

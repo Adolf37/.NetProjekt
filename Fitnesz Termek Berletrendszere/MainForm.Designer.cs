@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button_reserve = new System.Windows.Forms.Button();
             this.button_logout = new System.Windows.Forms.Button();
             this.button_client = new System.Windows.Forms.Button();
             this.button_rental_type = new System.Windows.Forms.Button();
@@ -46,7 +47,6 @@
             this.mySqlCommand1 = new MySql.Data.MySqlClient.MySqlCommand();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel_m = new System.Windows.Forms.Panel();
-            this.button_reserve = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel_main.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -71,6 +71,20 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(138, 700);
             this.panel1.TabIndex = 0;
+            // 
+            // button_reserve
+            // 
+            this.button_reserve.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button_reserve.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_reserve.ForeColor = System.Drawing.Color.Black;
+            this.button_reserve.Image = ((System.Drawing.Image)(resources.GetObject("button_reserve.Image")));
+            this.button_reserve.Location = new System.Drawing.Point(0, 477);
+            this.button_reserve.Name = "button_reserve";
+            this.button_reserve.Size = new System.Drawing.Size(138, 118);
+            this.button_reserve.TabIndex = 4;
+            this.button_reserve.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button_reserve.UseVisualStyleBackColor = true;
+            this.button_reserve.Click += new System.EventHandler(this.button_reserve_Click);
             // 
             // button_logout
             // 
@@ -250,19 +264,6 @@
             this.panel_m.Name = "panel_m";
             this.panel_m.Size = new System.Drawing.Size(1100, 700);
             this.panel_m.TabIndex = 3;
-            // 
-            // button_reserve
-            // 
-            this.button_reserve.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button_reserve.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_reserve.ForeColor = System.Drawing.Color.Black;
-            this.button_reserve.Image = ((System.Drawing.Image)(resources.GetObject("button_reserve.Image")));
-            this.button_reserve.Location = new System.Drawing.Point(0, 477);
-            this.button_reserve.Name = "button_reserve";
-            this.button_reserve.Size = new System.Drawing.Size(138, 118);
-            this.button_reserve.TabIndex = 4;
-            this.button_reserve.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button_reserve.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
